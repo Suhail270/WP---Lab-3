@@ -1,15 +1,15 @@
 {
     "name":"lab02_cart",
     "version":"1.0.0",
-    "description":"",
+    "description":"Lab 3 - Shopping Cart",
     "main":"app.js",
     "scripts":{
         "test":"echo \"Error: no test specified\" && exit 1",
         "dev":"nodemon app.js","debug":"nodemon --inspect app.js"
     },
     
-    "keywords":[],
-    "author":"",
+    "keywords":["shopping cart", "lab 3"],
+    "author":"Suhail Ahmed",
     "license":"ISC",
     
     "dependencies":{
