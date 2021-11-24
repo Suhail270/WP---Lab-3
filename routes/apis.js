@@ -11,6 +11,7 @@ const router = express.Router();
 //route for listing all products
 router.get('/api/catalog', productController.getCatalogue);
 router.get('/api/article/:id', productController.getProductByID);
+router.get('/api/adminclient', clientController.getClients);
 
 //routes for dynamic processing of clients //-----------------------------------------------
 //route for registration

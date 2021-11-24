@@ -74,6 +74,16 @@ const registerService = (client, callback) => {
 };
 
 const searchService = function(callback) { //to be completed
+    clientDAO.find(function(err, rows) {
+        if (err) {
+            throw err;
+        }
+        if (rows.length == 0) {
+            console.log("No products!");
+        } else {
+            callback(null, rows);
+        }
+    });
 };
 
 const searchNumclientService = function(num_client, callback) {

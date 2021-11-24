@@ -21,13 +21,22 @@ const loginControl = (request, response) => {
                     //add to session
                     request.session.user = username;
                     request.session.num_client = client[0].num_client;
-                    request.session.admin = false;
-                    response.render('SuccessfulLogin', {id:username})
+                    
+                    if(username=="admin" && password=="iamadmin"){
+                        request.session.admin = true
+                        response.render('adminlogin', {id:username})
+                    }
+                    else{
+                        response.render('SuccessfulLogin', {id:username})
+                    }
+
+                    
                 }
             });
         }
     }
 };
+
 
 
 const registerControl = (request, response) => {
@@ -61,9 +70,12 @@ const registerControl = (request, response) => {
 
 const getClients = (request, response) => {
     const clientServices = require('../services/clientServices');
+    console.log("hi:;;;;;;;;;;;;;;;;;;;;;;;;;")
     clientServices.searchService(function(err, rows) {
-        response.json(rows);
-        response.end();
+        console.log("--------------" + rows)
+        if(request.session.admin = true){
+            response.render('adminclient', { clients: rows })}
+        
     });
 };
 
