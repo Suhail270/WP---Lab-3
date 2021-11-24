@@ -5,7 +5,7 @@ const app = express();
 // using JSON and URL Encoded middleware
 
 const session = require('express-session');
-app.use(session({secret: 'some secret code'}));
+app.use(session({secret: 'shhhh'}));
 
 app.use(express.json());
 

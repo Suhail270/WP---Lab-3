@@ -9,7 +9,7 @@
     },
     
     "keywords":["shopping cart", "lab 3"],
-    "author":"Suhail Ahmed",
+    "author":"Professor Hadj Batatia & Suhail Ahmed",
     "license":"ISC",
     
     "dependencies":{
@@ -22,6 +22,4 @@
         }
     }
 
-
-
-
+    
