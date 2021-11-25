@@ -70,9 +70,7 @@ const registerControl = (request, response) => {
 
 const getClients = (request, response) => {
     const clientServices = require('../services/clientServices');
-    console.log("hi:;;;;;;;;;;;;;;;;;;;;;;;;;")
     clientServices.searchService(function(err, rows) {
-        console.log("--------------" + rows)
         if(request.session.admin = true){
             response.render('adminclient', { clients: rows })}
         

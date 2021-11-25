@@ -29,9 +29,11 @@ res.render('index'); //no need for ejs extension
 app.get('/contacts', (req, res) => { res.render('contacts');
 });
 
+//route for register
 app.get('/register', (req, res) => { res.render('register');
 });
 
+//route for login
 app.get('/login', (req, res) => { res.render('login');
 });
 
